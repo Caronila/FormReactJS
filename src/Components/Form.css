@@ -1,0 +1,45 @@
+div {
+   text-align: center;
+   margin: auto;
+}
+
+div.form {
+    background-color: pink;
+    display: inline-block;
+    border-radius: 12px;
+   margin: auto;
+}
+
+form {
+    gap: 10px;
+    font-size: large;
+    text-align: justify;
+}
+
+button {
+    background-color: palevioletred;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+
+li {
+    list-style-type: none;  
+    margin: 20px;
+  margin-left: 0;
+}
+label {
+    font-weight: bold;
+    
+}
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-self: center;
+    display: block;
+}
