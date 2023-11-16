@@ -1,13 +1,13 @@
 div {
-   text-align: center;
-   margin: auto;
+    text-align: center;
+    margin: auto;
 }
 
 div.form {
     background-color: pink;
     display: inline-block;
     border-radius: 12px;
-   margin: auto;
+    margin: auto;
 }
 
 form {
@@ -25,17 +25,19 @@ button {
     cursor: pointer;
     text-align: center;
     width: 100%;
-  }
+}
 
 li {
-    list-style-type: none;  
+    list-style-type: none;
     margin: 20px;
-  margin-left: 0;
+    margin-left: 0;
 }
+
 label {
     font-weight: bold;
-    
+
 }
+
 input {
     padding: 8px;
     border: 1px solid #ccc;
