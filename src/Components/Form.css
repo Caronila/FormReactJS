@@ -4,7 +4,7 @@ div {
 }
 
 div.form {
-    background-color: #8e4bba;
+    background-color: #3e1c54;
     display: inline-block;
     border-radius: 12px;
     margin: auto;
@@ -17,9 +17,9 @@ form {
 }
 
 button {
-    background-color: palevioletred;
+    background-color: rgb(246, 185, 206);
     padding: 10px;
-    color: #fff;
+    color: #3e1c54;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -35,6 +35,7 @@ li {
 
 label {
     font-weight: bold;
+    color: #fff ;
 
 }
 
