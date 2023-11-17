@@ -1,6 +1,6 @@
 import React from 'react'
 import './Form.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Form() {
 
@@ -13,7 +13,9 @@ export default function Form() {
     
         }
     );
-    
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const { nombre, apellido, email, phone, password } = formState
     
     const onInputChange = ({target}) => {
@@ -24,10 +26,35 @@ export default function Form() {
         })
     }
 
-    const onSubmit = (event) =>  {
-        event.preventDefault()
-        
+    const onSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmitted(true);
+
+    useEffect(() => {
+        if (isSubmitted) {
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000); // Cambia el tiempo según tus necesidades
+        }
+      }, [isSubmitted]);
+    
+      return (
+        <div className='form'>
+          <form onSubmit={onSubmit}>
+            {/* Resto del formulario */}
+          </form>
+    
+          {isSubmitted && (
+            <div className='success-message'>
+              ¡La información se ha enviado correctamente! La página se recargará en unos segundos.
+            </div>
+          )}
+    
+          {!isSubmitted && <button type='submit'>Enviar</button>}
+        </div>
+      );
     }
+
     return (
 
 
