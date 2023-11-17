@@ -1,4 +1,7 @@
 body {
-    background-image: url(/FormReactJS/src/assets/blobpatron.svg);
+    background-image: url('assets/blobpatron.svg');
+    background-repeat: no-repeat;
     background-size: cover;
+ 
 }
+
