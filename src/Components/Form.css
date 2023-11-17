@@ -7,9 +7,11 @@ div.form {
     background-color: #3e1c54;
     display: inline-block;
     border-radius: 12px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
     margin: auto;
     margin-right: 20px;
-    
+
 }
 
 form {
@@ -28,7 +30,7 @@ button {
     text-align: center;
     width: 100%;
     user-select: none;
-
+    box-shadow: #241031;
 }
 
 li {
