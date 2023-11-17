@@ -1,8 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Form.css'
 
 
-useState
+const [formState, setformState] = useState(
+    {
+        nombre: '',
+        email:'',
+        phone:'',
+        password:'',
+
+    }
+);
 
 export default function Form() {
     return (
@@ -30,7 +38,7 @@ export default function Form() {
                     </li>
                 </ul>
             </form>
-            <button type='submit'>Enviar</button>
+            <button type='submit' onClick={SubmitEvent}>Enviar</button>
 
         </div>
 
