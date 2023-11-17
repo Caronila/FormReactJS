@@ -28,12 +28,14 @@ button {
     cursor: pointer;
     text-align: center;
     width: 100%;
+    user-select: none;
 }
 
 li {
     list-style-type: none;
     margin: 20px;
     margin-left: 0;
+    user-select: none;
 }
 
 label {

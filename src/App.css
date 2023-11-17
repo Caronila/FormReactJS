@@ -10,7 +10,8 @@ h1 {
   background-image: url('./assets/oval.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
+  background-size: 50%;
+  user-select: none;
  
 }
 
