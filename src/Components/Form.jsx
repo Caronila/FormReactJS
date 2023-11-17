@@ -1,32 +1,38 @@
 import React from 'react'
 import './Form.css'
+import { useState } from 'react';
 
-
-const [formState, setFormState] = useState(
-    {
-        nombre: '',
-        email: '',
-        phone: '',
-        password: '',
-
-    }
-);
-
-const { nombre, apellido, email, phone, password } = formState
-
-const onInputChange = ({ target }) => {
-    const (nombreIngresado, value) = target
-    setFormState({
-        ...formState,
-        [nombreIngresado]: value
-    })
-}
 export default function Form() {
+
+    const [formState, setFormState] = useState(
+        {
+            nombre: '',
+            email: '',
+            phone: '',
+            password: '',
+    
+        }
+    );
+    
+    const { nombre, apellido, email, phone, password } = formState
+    
+    const onInputChange = ({target}) => {
+        const (name, value) = target
+        setFormState({
+            ...formState,
+            [name]: value
+        })
+    }
+
+    const onSubmit = (event) =>  {
+        event.preventDefault()
+        
+    }
     return (
 
 
         <div className='form'>
-            <form>
+            <form onSubmit={onSubmit}>
                 <ul>
                     <li><label htmlFor="nombre">Nombre:</label>
                         <input
