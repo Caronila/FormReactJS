@@ -82,7 +82,7 @@ export default function Form() {
                     </li>
                     <li><label htmlFor="phone">Telefono:</label>
                         <input
-                            type="number"
+                            type="text"
                             className="form-control"
                             name="phone"
                             placeholder='ingrese su teléfono'
