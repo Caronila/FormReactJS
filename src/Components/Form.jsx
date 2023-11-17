@@ -11,6 +11,7 @@ export default function Form() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const { nombre, apellido, email, phone, password } = formState;
 
@@ -25,14 +26,14 @@ export default function Form() {
   const onSubmit = (event) => {
     event.preventDefault();
     setIsSubmitted(true);
+    setShowSuccessMessage(true);
   };
 
-  // Efecto para recargar la página después de 2 segundos cuando el formulario se ha enviado.
   useEffect(() => {
     if (isSubmitted) {
       setTimeout(() => {
         window.location.reload();
-      }, 2000); // Cambia el tiempo según tus necesidades
+      }, 3000);
     }
   }, [isSubmitted]);
 
@@ -47,7 +48,7 @@ export default function Form() {
               className='form-control'
               name='nombre'
               id='nombre'
-              placeholder='ingrese su nombre'
+              placeholder='Ingrese su nombre'
               value={nombre}
               onChange={onInputChange}
               required
@@ -60,20 +61,20 @@ export default function Form() {
               className='form-control'
               name='apellido'
               id='apellido'
-              placeholder='ingrese su apellido'
+              placeholder='Ingrese su apellido'
               value={apellido}
               onChange={onInputChange}
               required
             />
           </li>
           <li>
-            <label htmlFor='phone'>Telefono:</label>
+            <label htmlFor='phone'>Teléfono:</label>
             <input
               type='tel'
               className='form-control'
               name='phone'
               id='phone'
-              placeholder='ingrese su teléfono'
+              placeholder='Ingrese su teléfono'
               value={phone}
               onChange={onInputChange}
               required
@@ -86,20 +87,20 @@ export default function Form() {
               id='email'
               className='form-control'
               name='email'
-              placeholder='ingrese su email'
+              placeholder='Ingrese su email'
               value={email}
               onChange={onInputChange}
               required
             />
           </li>
           <li>
-            <label htmlFor='password'>Password:</label>
+            <label htmlFor='password'>Contraseña:</label>
             <input
               type='password'
               id='password'
               className='form-control'
               name='password'
-              placeholder='ingrese su contraseña'
+              placeholder='Ingrese su contraseña'
               value={password}
               onChange={onInputChange}
               required
@@ -109,7 +110,7 @@ export default function Form() {
         <button type='submit'>Enviar</button>
       </form>
 
-      {isSubmitted && (
+      {showSuccessMessage && (
         <div className='success-message'>
           ¡La información se ha enviado correctamente! La página se recargará en unos segundos.
         </div>

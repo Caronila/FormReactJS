@@ -45,3 +45,8 @@ input {
     align-self: center;
     display: block;
 }
+
+.success-message {
+
+    display: grid;
+}
