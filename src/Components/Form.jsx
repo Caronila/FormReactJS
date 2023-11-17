@@ -70,7 +70,7 @@ export default function Form() {
                             placeholder='ingrese su nombre'
                             value={nombre}
                             onChange={onInputChange}
-                            required /></li>
+                            required="true"  /></li>
                     <li><label htmlFor="apellido">Apellido:</label>
 
                         <input
@@ -80,7 +80,7 @@ export default function Form() {
                             id='apellido'
                             placeholder='ingrese su apellido'
                             value={apellido}
-                            required />
+                            required="true"  />
                     </li>
                     <li><label htmlFor="phone">Telefono:</label>
                         <input
@@ -90,7 +90,7 @@ export default function Form() {
                             id='phone'
                             placeholder='ingrese su teléfono'
                             value={phone}
-                            required />
+                            required="false"  />
                     </li>
 
                     <li><label htmlFor="email">Email:</label>
@@ -101,7 +101,7 @@ export default function Form() {
                             name="email"
                             placeholder='ingrese su email'
                             value={email}
-                            required />
+                            required="true"  />
                     </li>
 
                     <li> <label htmlFor="password">Password:</label>
@@ -112,9 +112,9 @@ export default function Form() {
                             name="password"
                             placeholder='ingrese su contraseña'
                             value={password}
-                            required />
+                            required="true" />
                     </li>
-                    <li><label htmlFor="password2">Confirmar password:</label>
+                    {/* <li><label htmlFor="password2">Confirmar password:</label>
                         <input
                             type="password"
                             id='password2'
@@ -123,7 +123,7 @@ export default function Form() {
                             placeholder='re-ingrese su contraseña'
                             value={password}
                             required />
-                    </li>
+                    </li> */}
                 </ul>
             </form>
             <button type='submit'>Enviar</button>
