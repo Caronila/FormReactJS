@@ -17,7 +17,7 @@ export default function Form() {
     const { nombre, apellido, email, phone, password } = formState
     
     const onInputChange = ({target}) => {
-        const (name, value) = target
+        const {name, value} = target;
         setFormState({
             ...formState,
             [name]: value
