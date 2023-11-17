@@ -2,6 +2,4 @@
 body { 
     background-color: rgb(255, 248, 235);
     background-image: url(/FormReactJS/src/assets/blobpatron.svg);
-   
-    background-size: auto;
-  }
+       background-size: 100%;  }
