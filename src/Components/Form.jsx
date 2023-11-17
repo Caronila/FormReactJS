@@ -13,7 +13,7 @@ export default function Form() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  const { nombre, apellido, email, phone, password } = formState;
+  const { nombre, apellido, email, phone, password, password2 } = formState;
 
   const onInputChange = (event) => {
     const { name, value } = event.target;
@@ -52,7 +52,7 @@ export default function Form() {
                 placeholder='Ingrese su nombre'
                 value={nombre}
                 onChange={onInputChange}
-                required
+                required='true'
               />
             </li>
             <li>
@@ -103,6 +103,19 @@ export default function Form() {
                 name='password'
                 placeholder='Ingrese su contraseña'
                 value={password}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+            <li>
+              <label htmlFor='password2'>Confirmar contraseña:</label>
+              <input
+                type='password'
+                id='password2'
+                className='form-control'
+                name='password2'
+                placeholder='Re-ingrese su contraseña'
+                value={password2}
                 onChange={onInputChange}
                 required
               />
