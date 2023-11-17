@@ -3,10 +3,15 @@
 
 
 h1 {
-  font-family: Agbalumo;
-  color: #1a181c;
-  text-align: center;
   
+  font-family: Agbalumo;
+  color: #efe0ff;
+  text-align: center;
+  background-image: url('./assets/oval.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+ 
 }
 
 div {
