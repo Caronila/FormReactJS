@@ -1,3 +1,6 @@
+
 body {
     background-image: url(/FormReactJS/src/assets/blobpatron.png);
-}
+    background-color: wheat;
+    background-size: auto;
+  }
