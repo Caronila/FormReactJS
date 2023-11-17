@@ -1,3 +1,5 @@
+
+
 div {
     text-align: center;
     margin: auto;
@@ -8,6 +10,7 @@ div.form {
     display: inline-block;
     border-radius: 12px;
     margin: auto;
+    margin-left: 10px;
 }
 
 form {
