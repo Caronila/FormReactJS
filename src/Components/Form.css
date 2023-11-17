@@ -10,7 +10,7 @@ div.form {
     display: inline-block;
     border-radius: 12px;
     margin: auto;
-    margin-left: 10px;
+        margin-right: 20px;
 }
 
 form {
@@ -20,7 +20,7 @@ form {
 }
 
 button {
-    background-color: rgb(246, 185, 206);
+    background-color:#ffb1e9;
     padding: 10px;
     color: #3e1c54;
     border: none;
@@ -29,6 +29,7 @@ button {
     text-align: center;
     width: 100%;
     user-select: none;
+    
 }
 
 li {
