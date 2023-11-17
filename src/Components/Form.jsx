@@ -38,77 +38,79 @@ export default function Form() {
   }, [isSubmitted]);
 
   return (
-    <div className='form'>
-      <form onSubmit={onSubmit}>
-        <ul>
-          <li>
-            <label htmlFor='nombre'>Nombre:</label>
-            <input
-              type='text'
-              className='form-control'
-              name='nombre'
-              id='nombre'
-              placeholder='Ingrese su nombre'
-              value={nombre}
-              onChange={onInputChange}
-              required
-            />
-          </li>
-          <li>
-            <label htmlFor='apellido'>Apellido:</label>
-            <input
-              type='text'
-              className='form-control'
-              name='apellido'
-              id='apellido'
-              placeholder='Ingrese su apellido'
-              value={apellido}
-              onChange={onInputChange}
-              required
-            />
-          </li>
-          <li>
-            <label htmlFor='phone'>Teléfono:</label>
-            <input
-              type='tel'
-              className='form-control'
-              name='phone'
-              id='phone'
-              placeholder='Ingrese su teléfono'
-              value={phone}
-              onChange={onInputChange}
-              required
-            />
-          </li>
-          <li>
-            <label htmlFor='email'>Email:</label>
-            <input
-              type='email'
-              id='email'
-              className='form-control'
-              name='email'
-              placeholder='Ingrese su email'
-              value={email}
-              onChange={onInputChange}
-              required
-            />
-          </li>
-          <li>
-            <label htmlFor='password'>Contraseña:</label>
-            <input
-              type='password'
-              id='password'
-              className='form-control'
-              name='password'
-              placeholder='Ingrese su contraseña'
-              value={password}
-              onChange={onInputChange}
-              required
-            />
-          </li>
-        </ul>
-        <button type='submit'>Enviar</button>
-      </form>
+    <div>
+      <div className='form'>
+        <form onSubmit={onSubmit}>
+          <ul>
+            <li>
+              <label htmlFor='nombre'>Nombre:</label>
+              <input
+                type='text'
+                className='form-control'
+                name='nombre'
+                id='nombre'
+                placeholder='Ingrese su nombre'
+                value={nombre}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+            <li>
+              <label htmlFor='apellido'>Apellido:</label>
+              <input
+                type='text'
+                className='form-control'
+                name='apellido'
+                id='apellido'
+                placeholder='Ingrese su apellido'
+                value={apellido}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+            <li>
+              <label htmlFor='phone'>Teléfono:</label>
+              <input
+                type='tel'
+                className='form-control'
+                name='phone'
+                id='phone'
+                placeholder='Ingrese su teléfono'
+                value={phone}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+            <li>
+              <label htmlFor='email'>Email:</label>
+              <input
+                type='email'
+                id='email'
+                className='form-control'
+                name='email'
+                placeholder='Ingrese su email'
+                value={email}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+            <li>
+              <label htmlFor='password'>Contraseña:</label>
+              <input
+                type='password'
+                id='password'
+                className='form-control'
+                name='password'
+                placeholder='Ingrese su contraseña'
+                value={password}
+                onChange={onInputChange}
+                required
+              />
+            </li>
+          </ul>
+          <button type='submit'>Enviar</button>
+        </form>
+      </div>
 
       {showSuccessMessage && (
         <div className='success-message'>
