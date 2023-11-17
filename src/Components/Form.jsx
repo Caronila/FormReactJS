@@ -10,16 +10,16 @@ export default function Form() {
             email: '',
             phone: '',
             password: '',
-    
+
         }
     );
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const { nombre, apellido, email, phone, password } = formState
-    
-    const onInputChange = ({target}) => {
-        const {name, value} = target;
+
+    const onInputChange = ({ target }) => {
+        const { name, value } = target;
         setFormState({
             ...formState,
             [name]: value
@@ -27,32 +27,32 @@ export default function Form() {
     }
 
     const onSubmit = (event) => {
-    event.preventDefault();
-    setIsSubmitted(true);
+        event.preventDefault();
+        setIsSubmitted(true);
 
-    useEffect(() => {
-        if (isSubmitted) {
-          setTimeout(() => {
-            window.location.reload();
-          }, 2000); // Cambia el tiempo según tus necesidades
-        }
-      }, [isSubmitted]);
-    
-      return (
-        <div className='form'>
-          <form onSubmit={onSubmit}>
-            {/* Resto del formulario */}
-          </form>
-    
-          {isSubmitted && (
-            <div className='success-message'>
-              ¡La información se ha enviado correctamente! La página se recargará en unos segundos.
+        useEffect(() => {
+            if (isSubmitted) {
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000); // Cambia el tiempo según tus necesidades
+            }
+        }, [isSubmitted]);
+
+        return (
+            <div className='form'>
+                <form onSubmit={onSubmit}>
+                    {/* Resto del formulario */}
+                </form>
+
+                {isSubmitted && (
+                    <div className='success-message'>
+                        ¡La información se ha enviado correctamente! La página se recargará en unos segundos.
+                    </div>
+                )}
+
+                {!isSubmitted && <button type='submit'>Enviar</button>}
             </div>
-          )}
-    
-          {!isSubmitted && <button type='submit'>Enviar</button>}
-        </div>
-      );
+        );
     }
 
     return (
@@ -70,7 +70,8 @@ export default function Form() {
                             placeholder='ingrese su nombre'
                             value={nombre}
                             onChange={onInputChange}
-                            required="true"  /></li>
+                            required="true" /></li>
+
                     <li><label htmlFor="apellido">Apellido:</label>
 
                         <input
@@ -80,8 +81,9 @@ export default function Form() {
                             id='apellido'
                             placeholder='ingrese su apellido'
                             value={apellido}
-                            required="true"  />
+                            required="true" />
                     </li>
+                    
                     <li><label htmlFor="phone">Telefono:</label>
                         <input
                             type="text"
@@ -90,7 +92,7 @@ export default function Form() {
                             id='phone'
                             placeholder='ingrese su teléfono'
                             value={phone}
-                            required="false"  />
+                            required="false" />
                     </li>
 
                     <li><label htmlFor="email">Email:</label>
@@ -101,7 +103,7 @@ export default function Form() {
                             name="email"
                             placeholder='ingrese su email'
                             value={email}
-                            required="true"  />
+                            required="true" />
                     </li>
 
                     <li> <label htmlFor="password">Password:</label>
