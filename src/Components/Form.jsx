@@ -66,6 +66,7 @@ export default function Form() {
                             type="text"
                             className="form-control"
                             name="nombre"
+                            id='nombre'
                             placeholder='ingrese su nombre'
                             value={nombre}
                             onChange={onInputChange}
@@ -76,6 +77,7 @@ export default function Form() {
                             type="text"
                             className="form-control"
                             name="apellido"
+                            id='apellido'
                             placeholder='ingrese su apellido'
                             value={apellido}
                             required />
@@ -85,6 +87,7 @@ export default function Form() {
                             type="text"
                             className="form-control"
                             name="phone"
+                            id='phone'
                             placeholder='ingrese su teléfono'
                             value={phone}
                             required />
@@ -93,6 +96,7 @@ export default function Form() {
                     <li><label htmlFor="email">Email:</label>
                         <input
                             type="email"
+                            id='email'
                             className="form-control"
                             name="email"
                             placeholder='ingrese su email'
@@ -103,15 +107,17 @@ export default function Form() {
                     <li> <label htmlFor="password">Password:</label>
                         <input
                             type="password"
+                            id='password'
                             className="form-control"
                             name="password"
                             placeholder='ingrese su contraseña'
                             value={password}
                             required />
                     </li>
-                    <li><label htmlFor="password">Confirmar password:</label>
+                    <li><label htmlFor="password2">Confirmar password:</label>
                         <input
                             type="password"
+                            id='password2'
                             className="form-control"
                             name="password"
                             placeholder='re-ingrese su contraseña'
